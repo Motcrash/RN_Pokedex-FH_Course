@@ -6,7 +6,7 @@ If you want to try the app just download the project and execute the following c
 
 # Installing dependencies
 
-First, you will need to install the dependencies of the project on the cmd or bash for this run the following command
+First, you will need to install the dependencies of the project on the cmd or bash, for this run the following command
 
 ```bash
 yarn add
