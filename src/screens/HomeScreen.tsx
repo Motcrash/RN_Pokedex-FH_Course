@@ -18,7 +18,7 @@ export const HomeScreen = () => {
                 style={ styles.pokebolaBG }
             />
 
-            <View style={{ alignItems: 'center' }}>
+            <View style={{ alignItems: 'center', marginBottom: 50 }}>
                 <FlatList
                     data={ simplePokemonList }
                     keyExtractor={ ( poke ) => poke.id }

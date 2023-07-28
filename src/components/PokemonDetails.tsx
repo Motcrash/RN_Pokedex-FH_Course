@@ -89,7 +89,7 @@ export const PokemonDetails = ({ pokemon, color }: Props) => {
 
             {/* Stats */}
             <Text style={stylesScreen.title}>Stats</Text>
-            <View style={{ flexWrap: 'wrap', marginHorizontal: 20}}>
+            <View style={{ flexWrap: 'wrap'}}>
                 {
                     pokemon.stats.map( ( stat, index ) => (
                         <View

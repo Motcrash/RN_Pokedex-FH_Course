@@ -16,6 +16,9 @@ export const PokemonScreen = ({ navigation, route}: Props) => {
     
     const { simplePokemon, color} = route.params;
     const { id, name, picture } = simplePokemon;
+
+    const pokemonName = name.charAt(0).toUpperCase() + name.slice(1);
+
     const { top } = useSafeAreaInsets(); 
 
     const { isLoading, pokemon } = usePokemon( id );
@@ -45,7 +48,7 @@ export const PokemonScreen = ({ navigation, route}: Props) => {
                     ...stylesScreen.pokemonName,
                     top: top+60
                 }}>
-                    {name}
+                    {pokemonName}
                 </Text>
                 
                 {/* Pokeball */}

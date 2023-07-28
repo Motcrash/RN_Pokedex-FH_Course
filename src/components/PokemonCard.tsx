@@ -22,6 +22,8 @@ export const PokemonCard = ({ pokemon }: Props) => {
     const isMounted = useRef(true);
     const navigation = useNavigation();
 
+    const pokemonName = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+
     useEffect(() => {
 
         if ( !isMounted.current )  return;
@@ -55,9 +57,9 @@ export const PokemonCard = ({ pokemon }: Props) => {
                 )}
             >
                 <View style={{...stylesScreen.cardContainer, backgroundColor: bgColor }}>
-                    <View style={ stylesScreen.pokeName }>
+                    <View style={ stylesScreen.nameContainer }>
                         <Text style={ stylesScreen.pokeName }>
-                            { pokemon.name }
+                            { pokemonName }
                             { '\n#' + pokemon.id }
                         </Text>
                     </View>
@@ -97,12 +99,15 @@ const stylesScreen = StyleSheet.create({
         shadowRadius: 6.27,
         elevation: 10,
     },
+    nameContainer: {
+        top: 20,
+        left: 10,
+        width: 130,
+    },
     pokeName: {
         color: 'white',
         fontSize: 20,
         fontWeight: 'bold',
-        top: 10,
-        left: 10,
     },
     pokeballContainer: {
         width: 100,
@@ -124,7 +129,7 @@ const stylesScreen = StyleSheet.create({
         width: 90,
         height: 90,
         position: 'absolute',
-        right: -8,
-        bottom: 0,
+        right: -9,
+        bottom: -5,
     },
 });
