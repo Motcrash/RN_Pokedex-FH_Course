@@ -115,7 +115,7 @@ export const PokemonDetails = ({ pokemon, color }: Props) => {
 
             {/* Moves */}
             <Text style={stylesScreen.title}>Moves</Text>
-            <View style={{ flexDirection: 'row', flexWrap: 'wrap'}}>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginBottom: 70}}>
                 {
                     pokemon.moves.map( ({ move }) => (
                         <Text 
